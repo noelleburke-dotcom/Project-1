@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4 Game</title>
+    <link rel="stylesheet" href="gameboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+<body>
+    <section id="title">
+        <h1><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+</svg> Play Connect 4! <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+  <circle cx="8" cy="8" r="8"/>
+</svg> </h1>
+    </section>
+<aside>Player Turn</aside>
+<div class="board">
+  <!--row one-->
+<div class="dot" style="top: 15px; left: 15px;"></div>
+<div class="dot" style="top: 15px; left: 105px;"></div>
+<div class="dot" style="top: 15px; left: 190px;"></div>
+<div class="dot" style="top: 15px; left: 275px;"></div>
+<div class="dot" style="top: 15px; left: 360px;"></div>
+<div class="dot" style="top: 15px; left: 445px;"></div>
+<!--row two-->
+<div class="dot" style="top: 120px; left: 15px;"></div>
+<div class="dot" style="top: 120px; left: 105px;"></div>
+<div class="dot" style="top: 120px; left: 190px;"></div>
+<div class="dot" style="top: 120px; left: 275px;"></div>
+<div class="dot" style="top: 120px; left: 360px;"></div>
+<div class="dot" style="top: 120px; left: 445px;"></div>
+<!--row three-->
+<div class="dot" style="top: 215px; left: 15px;"></div>
+<div class="dot" style="top: 215px; left: 105px;"></div>
+<div class="dot" style="top: 215px; left: 190px;"></div>
+<div class="dot" style="top: 215px; left: 275px;"></div>
+<div class="dot" style="top: 215px; left: 360px;"></div>
+<div class="dot" style="top: 215px; left: 445px;"></div>
+<!--row four-->
+<div class="dot" style="top: 310px; left: 15px;"></div>
+<div class="dot" style="top: 310px; left: 105px;"></div>
+<div class="dot" style="top: 310px; left: 190px;"></div>
+<div class="dot" style="top: 310px; left: 275px;"></div>
+<div class="dot" style="top: 310px; left: 360px;"></div>
+<div class="dot" style="top: 310px; left: 445px;"></div>
+<!--row five-->
+<div class="dot" style="top: 405px; left: 15px;"></div>
+<div class="dot" style="top: 405px; left: 105px;"></div>
+<div class="dot" style="top: 405px; left: 190px;"></div>
+<div class="dot" style="top: 405px; left: 275px;"></div>
+<div class="dot" style="top: 405px; left: 360px;"></div>
+<div class="dot" style="top: 405px; left: 445px;"></div>
+<!--row six-->
+<div class="dot" style="top: 500px; left: 15px;"></div>
+<div class="dot" style="top: 500px; left: 105px;"></div>
+<div class="dot" style="top: 500px; left: 190px;"></div>
+<div class="dot" style="top: 500px; left: 275px;"></div>
+<div class="dot" style="top: 500px; left: 360px;"></div>
+<div class="dot" style="top: 500px; left: 445px;"></div>
+</div>
+</body>
+
+
+
+<!--6 rows 6 columns-->
+
+
+<footer>
+        <p>&copy; 2025 Noelle. Built with HTML, CSS, and Bootstrap.</p>
+</footer>
