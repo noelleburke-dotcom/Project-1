@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function(){
 const dots = document.querySelectorAll('.dot');
 dots.forEach(dot => {
     dot.addEventListener('click', function(e) {
+        if (gameOver) return;
     const column = parseInt(dot.dataset.column) - 1; 
     const row = parseInt(dot.dataset.row) - 1;
     console.log(`Clicked: Row ${row}, Column ${column}`);
@@ -47,9 +48,13 @@ dots.forEach(dot => {
    //if game over break out of loop 
     //else call placeChip turnSwitch and checkWin 
 function connectFourGame(){
+    if (!gameOver){
     placeChip();
-    turnSwitch();
-    checkWin();
+    
+    }
+    else{
+        console.log("game over!!")
+    }
 }
 
 function placeChip(row,column,dot){
@@ -77,14 +82,20 @@ function placeChip(row,column,dot){
         console.log(spots);
     }
 turnSwitch();
-    //check whose turn where they click place color of chip 
-    //and add to spots array
 checkWin();
+}
+
+function playerTurnDisplay(){
+    const playerTurn=document.getElementById("playerTurn");
+    playerTurn.textContent=`${currentPlayer} Player Turn`;
+    playerTurn.classList.remove('blue','yellow')
+    playerTurn.classList.add(currentPlayer.toLowerCase());
 }
 
 function turnSwitch(){
 //switch color of chip placed and whose turn it is 
- currentPlayer = (currentPlayer === 'Blue') ? 'Yellow' : 'Blue';
+    currentPlayer = (currentPlayer === 'Blue') ? 'Yellow' : 'Blue';
+    playerTurnDisplay();
 }
 
 

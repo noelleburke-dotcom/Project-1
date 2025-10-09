@@ -5,11 +5,17 @@
     margin: auto;
 }
 
-aside{
+.blue{
     text-align: right;
     margin-right: 100px;
     font-size: 30px;
     color: blue;
+}
+.yellow{
+    text-align: left;
+    margin-left: 100px;
+    font-size: 30px;
+    color: yellow;
 }
 
 .board{
