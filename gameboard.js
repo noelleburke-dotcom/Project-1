@@ -88,8 +88,13 @@ checkWin();
 function playerTurnDisplay(){
     const playerTurn=document.getElementById("playerTurn");
     playerTurn.textContent=`${currentPlayer} Player Turn`;
-    playerTurn.classList.remove('blue','yellow')
-    playerTurn.classList.add(currentPlayer.toLowerCase());
+    playerTurn.classList.remove('blue','yellow');
+    if (currentPlayer=="Blue"){
+        playerTurn.classList.add('blue');
+    }
+    else{
+        playerTurn.classList.add('yellow');
+    }
 }
 
 function turnSwitch(){
@@ -98,7 +103,7 @@ function turnSwitch(){
     playerTurnDisplay();
 }
 
-
+const winMessage=document.getElementById("WIN");
 function checkWin(){
 // //look over final from last year and adapt to fit this 
         for(let i=0;i<6; i++ ){
@@ -112,6 +117,16 @@ function checkWin(){
                 spots[i][j] !== "" && spots[i][j] === spots[i + 1][j] &&
                 spots[i][j] === spots[i + 2][j] && spots[i][j] === spots[i + 3][j]
             ){
+                if(spots[i][j]=="B"){
+                    winMessage.textContent=`Blue Player Wins!`;
+                    winMessage.classList.remove('win');
+                    winMessage.classList.add("winBlue");
+                }
+                else{
+                    winMessage.textContent=`Yellow Player Wins!`;
+                    winMessage.classList.remove('win');
+                    winMessage.classList.add("winYellow");
+                }
                 console.log("Vertical win!");
                 gameOver = true;
                 return true;
@@ -123,6 +138,16 @@ function checkWin(){
                 spots[i][j]===spots[i][j+1]&&
                 spots[i][j]===spots[i][j+2] && spots[i][j]===spots[i][j+3]
             ){
+                 if(spots[i][j]=="B"){
+                    winMessage.textContent=`Blue Player Wins!`;
+                    winMessage.classList.remove('win');
+                    winMessage.classList.add("winBlue");
+                }
+                else{
+                    winMessage.textContent=`Yellow Player Wins!`;
+                    winMessage.classList.remove('win');
+                    winMessage.classList.add("winYellow");
+                }
                 console.log("game over");
                 gameOver=true;
                 return true;
@@ -134,6 +159,16 @@ function checkWin(){
                 spots[i][j]===spots[i-1][j+1] &&
                 spots[i][j]===spots[i-2][j+2] && spots[i][j]===spots[i-3][j+3]
             ){
+                 if(spots[i][j]=="B"){
+                    winMessage.textContent=`Blue Player Wins!`;
+                    winMessage.classList.remove('win');
+                    winMessage.classList.add("winBlue");
+                }
+                else{
+                    winMessage.textContent=`Yellow Player Wins!`;
+                    winMessage.classList.remove('win');
+                    winMessage.classList.add("winYellow");
+                }
                 console.log("game over");
                 gameOver=true;
                 return true;
@@ -144,6 +179,16 @@ function checkWin(){
                 spots[i][j]===spots[i+1][j+1] &&
                 spots[i][j]=== spots[i+2][j+2] && spots[i][j]===spots[i+3][j+3]
             ){
+                 if(spots[i][j]=="B"){
+                    winMessage.textContent=`Blue Player Wins!`;
+                    winMessage.classList.remove('win');
+                    winMessage.classList.add("winBlue");
+                }
+                else{
+                    winMessage.textContent=`Yellow Player Wins!`;
+                    winMessage.classList.remove('win');
+                    winMessage.classList.add("winYellow");
+                }
                 console.log("game over");
                 gameOver=true;
                 return true;

@@ -7,14 +7,53 @@
 
 .blue{
     text-align: right;
-    margin-right: 100px;
+    margin-right: 50px;
     font-size: 30px;
     color: blue;
 }
 .yellow{
     text-align: left;
-    margin-left: 100px;
+    margin-left: 50px;
     font-size: 30px;
+    color: yellow;
+}
+.win{
+    display: none;
+}
+
+.winBlue{
+    position: absolute;
+    width: 1500px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 150px;
+    margin: auto;
+    background-color:#ffffa6;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    text-align: center;
+    color: blue;
+}
+.winYellow{
+    width: 1500px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 150px;
+    margin: auto;
+    background-color:#9595ec;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    text-align: center;
     color: yellow;
 }
 
