@@ -36,6 +36,28 @@
     font-size: 80px;
     text-align: center;
     color: blue;
+    text-shadow: 2px 2px 10px #0000ff, 0 0 20px #a3b5ff;
+   
+}
+.lineUp {
+  animation: 2s anim-lineUp ease-out infinite;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%, calc(-50% + 80%));
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%, -50%);
+  }
 }
 .winYellow{
     width: 1500px;
@@ -55,6 +77,8 @@
     font-size: 80px;
     text-align: center;
     color: yellow;
+    text-shadow: 2px 2px 10px #ffff66, 0 0 20px #ffea00;
+    
 }
 
 .board{

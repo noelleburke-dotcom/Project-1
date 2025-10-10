@@ -119,13 +119,14 @@ function checkWin(){
             ){
                 if(spots[i][j]=="B"){
                     winMessage.textContent=`Blue Player Wins!`;
-                    winMessage.classList.remove('win');
-                    winMessage.classList.add("winBlue");
+                    winMessage.className = "";
+                    winMessage.classList.add("winBlue", "lineUp");
                 }
                 else{
                     winMessage.textContent=`Yellow Player Wins!`;
-                    winMessage.classList.remove('win');
-                    winMessage.classList.add("winYellow");
+                    winMessage.className = "";
+                    void winMessage.offsetWidth;
+                    winMessage.classList.add("winYellow", "lineUp");
                 }
                 console.log("Vertical win!");
                 gameOver = true;
@@ -140,13 +141,14 @@ function checkWin(){
             ){
                  if(spots[i][j]=="B"){
                     winMessage.textContent=`Blue Player Wins!`;
-                    winMessage.classList.remove('win');
-                    winMessage.classList.add("winBlue");
+                    winMessage.className = "";
+                    winMessage.classList.add("winBlue", "lineUp");
                 }
                 else{
                     winMessage.textContent=`Yellow Player Wins!`;
-                    winMessage.classList.remove('win');
-                    winMessage.classList.add("winYellow");
+                    winMessage.className = "";
+                    void winMessage.offsetWidth;
+                    winMessage.classList.add("winYellow", "lineUp");
                 }
                 console.log("game over");
                 gameOver=true;
@@ -161,13 +163,14 @@ function checkWin(){
             ){
                  if(spots[i][j]=="B"){
                     winMessage.textContent=`Blue Player Wins!`;
-                    winMessage.classList.remove('win');
-                    winMessage.classList.add("winBlue");
+                    winMessage.className = "";
+                    winMessage.classList.add("winBlue", "lineUp");
                 }
                 else{
                     winMessage.textContent=`Yellow Player Wins!`;
-                    winMessage.classList.remove('win');
-                    winMessage.classList.add("winYellow");
+                    winMessage.className = "";
+                    void winMessage.offsetWidth;
+                    winMessage.classList.add("winYellow", "lineUp");
                 }
                 console.log("game over");
                 gameOver=true;
@@ -181,13 +184,15 @@ function checkWin(){
             ){
                  if(spots[i][j]=="B"){
                     winMessage.textContent=`Blue Player Wins!`;
-                    winMessage.classList.remove('win');
-                    winMessage.classList.add("winBlue");
+                    winMessage.className = "";
+                    void winMessage.offsetWidth;
+                    winMessage.classList.add("winBlue", "lineUp");
                 }
                 else{
                     winMessage.textContent=`Yellow Player Wins!`;
-                    winMessage.classList.remove('win');
-                    winMessage.classList.add("winYellow");
+                    winMessage.className = "";
+                    void winMessage.offsetWidth;
+                    winMessage.classList.add("winYellow","lineUp");
                 }
                 console.log("game over");
                 gameOver=true;
